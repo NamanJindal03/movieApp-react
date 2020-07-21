@@ -6,7 +6,12 @@ import App from './components/App';
 import movie from './reducers/index';
 
 const store = createStore(movie);
-console.log("store",store.getState());
+console.log("before store",store.getState());
+store.dispatch({
+  type: 'ADD_MOVIES',
+  movies: [{name: "superman"}]
+})
+console.log("after store",store.getState());
 ReactDOM.render(
   <React.StrictMode>
     <App />
