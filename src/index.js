@@ -6,15 +6,15 @@ import App from './components/App';
 import movie from './reducers/index';
 
 const store = createStore(movie);
-console.log("before store",store.getState());
-store.dispatch({
-  type: 'ADD_MOVIES',
-  movies: [{name: "superman"}]
-})
-console.log("after store",store.getState());
+// console.log("before store",store.getState());
+// store.dispatch({
+//   type: 'ADD_MOVIES',
+//   movies: [{name: "superman"}]
+// })
+// console.log("after store",store.getState());
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App store={store}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
