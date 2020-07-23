@@ -6,7 +6,7 @@ const initialMovieState = {
     showFavourites: false
 }
 export function movies(state=initialMovieState, action){
-    console.table( action);
+    //console.table( action);
     switch(action.type){
         case ADD_MOVIES:
             return{

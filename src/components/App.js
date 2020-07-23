@@ -32,7 +32,7 @@ class App extends React.Component {
   render(){
     const {movies} = this.props.store.getState(); //{movies:{}, search: {}}
     const {list, favourites, showFavourites} = movies;
-    console.log(this.props.store.getState())
+    //console.log(this.props.store.getState())
     const displayMovies = showFavourites ? favourites : list;
     return (
       <div className="App">
